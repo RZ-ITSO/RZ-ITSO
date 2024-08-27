@@ -13,6 +13,10 @@ Stuff Needed:   * syncFiles.csv - SFTP credentials, local and remote paths
 
 param([switch]$force)
 
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
+$PSDefaultParameterValues['*:ErrorAction']='Stop'
+
 # Load config
 Import-Module "C:\RZ-Github\config.ps1"
 
@@ -94,7 +98,7 @@ foreach ($customer in $customers){
                 
                 # Defining upload path for current file and testing if was uploaded
                 $filePath = $remoteRootPath + "/$($file.Name)" 
-                $checkFile = Test-SFTPPath -SessionId $sftpSession -Path $filePath #
+                $checkFile = Test-SFTPPath -SessionId $sftpSession -Path $filePath
                 
                 # If check is not 'True' (file upload successful), write remote path into log
                 if ($checkFile) {
