@@ -23,12 +23,12 @@ while ($true) {
         if ($items.Count -gt 0) {
             # Copy the folder recursively to the destination
             Copy-Item -Path $sourceFolder -Destination $destinationFolder -Recurse -Force
-            Out-Log "Folder copied successfully at $(Get-Date)"
+            Out-Log "Folder copied successfully"
         } else {
-            Out-Log "Folder exists but is empty at $(Get-Date)"
+            Out-Log "Folder exists but is empty"
         }
     } else {
-        Out-Log "Folder not found at $(Get-Date)"
+        Out-Log "Folder not found"
     }
 
     # Wait for 1 minute (60 seconds)
