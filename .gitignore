@@ -5,3 +5,4 @@ config.ps1
 run_sync
 run_proforzheimSync
 maintain
+*xml
