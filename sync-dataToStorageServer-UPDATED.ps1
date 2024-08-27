@@ -151,7 +151,7 @@ foreach ($customer in $customers){
             
             # Deleting local folder
             try {
-                $folders | Remove-Item -Recurse -ErrorAction Stop
+                $folders | Remove-Item -Recurse
                 
             } catch { # If a terminating error is encountered, write an error message into the log
                 $myError = $_
