@@ -88,7 +88,7 @@ foreach ($customer in $customers){
         $checkFile  = $false
         
         # As long as the check is unsuccessful and the maximum amount of retries is not reached, while loop is active
-        while (($checkFile -eq $false) -and $whileCounterCurrent -lt $whileCounterMaximum) {
+        while (($checkFile -eq $false) -and ($whileCounterCurrent -lt $whileCounterMaximum)) {
             
             try {
                 # Trying to upload the file
