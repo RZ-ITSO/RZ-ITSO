@@ -7,15 +7,16 @@ Purpose:        Automatically transfer files between the local folders to the cu
             
 Stuff Needed:   * syncFiles.csv - SFTP credentials, local and remote paths
                 * functions.ps1 - Logging and script exiting function, which removes status files
-                * config.ps1    - Path to log.txt file
+                * config.ps1    - Path to log.txt file  -> still the current C:\scripte\log.txt
 #>
 
 
 param([switch]$force)
-
+<#
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 $PSDefaultParameterValues['*:ErrorAction']='Stop'
+#>
 
 # Load config
 Import-Module "C:\RZ-Github\config.ps1"

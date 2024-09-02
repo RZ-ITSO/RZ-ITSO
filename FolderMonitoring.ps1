@@ -1,6 +1,6 @@
 # Set the source and destination paths
 $sourceFolder = "D:\MHI_Basis\Export\archiv\Pforzheim"
-$targetFolder = "C:\Users\MHI\Documents\Sync-SFTP-FolderCheck"
+$targetFolder = "C:\Sync-SFTP-FolderCheck"
 
 # Set the log path
 $LogPath = "C:\RZ-Github\monitoring.log"
@@ -29,7 +29,8 @@ while ($true) {
         $compareFolders = Compare-Object -ReferenceObject $sourceFolder -DifferenceObject $targetFolder #>
 
         # Check if the folder is not empty and it timeout of 1 day, since last copy has been reached
-        if ($itemsSource.Count -gt 0 -and (New-TimeSpan -Start $LastCopyTime.TotalSeconds -gt ($CopyTimeOut)) ) {
+        if ($itemsSource.Count -gt 0) { # -and (New-TimeSpan -Start $LastCopyTime.TotalSeconds -gt ($CopyTimeOut)) ) {
+
             # Copy the folder recursively to the destination
             Copy-Item -Path $sourceFolder -Destination $targetFolder -Recurse -Force
             $LastCopyTime = Get-Date

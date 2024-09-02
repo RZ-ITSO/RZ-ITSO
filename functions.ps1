@@ -5,7 +5,7 @@
 
     $logDate = Get-Date -UFormat "%Y-%m-%d %H:%M:%S"
 
-    Add-Content $logFile "[$logDate] $text"
+    Add-Content $logFile "[$logDate] $text" -Encoding UTF8
 }
 
 function endScript {
