@@ -1,3 +1,13 @@
+<#
+
+Authored by:    Dominic Cauglia 
+
+Purpose:        Automatically transfer files between the archive folders to a monitoring folder, to check what files were transferred.
+   
+DEPRECATED!! 
+
+#>
+
 # Set the source and destination paths
 $sourceFolder = "D:\MHI_Basis\Export\archiv\Pforzheim"
 $targetFolder = "C:\Sync-SFTP-FolderCheck"
