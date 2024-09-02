@@ -11,7 +11,7 @@ $sourceFolder = "D:\MHI_Basis\Export\archiv\Pforzheim"
 $targetFolder = "C:\Sync-SFTP-FolderCheck"
 
 # Set the log path
-$LogPath = "C:\RZ-Github\monitoring.log"
+$LogPath = "C:\Sync-SFTP-FolderCheck\monitoring.log"
 
 # Define a logging function
 Function Out-Log ($String) {
