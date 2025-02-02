@@ -25,8 +25,9 @@ while ($true) {
 
     # Check if the source folder exists
     if (Test-Path $sourceFolder) {
-        # Get all folders in the source folder recursively
-        $foldersSource = Get-ChildItem -Path $sourceFolder -Directory -Recurse
+        
+        # Get all folders in the source folder (recursively)
+        $foldersSource = Get-ChildItem -Path $sourceFolder -Directory #-Recurse
         
         if ($foldersSource.Count -gt 0) {
             foreach ($folder in $foldersSource) {
